@@ -28,3 +28,11 @@ def draw():
     position_hour =+ 1
     if position_hour > width:
         position_hour = 0
+    else: 
+        position_hour = map(hour(), 0, 24, 0, width)
+    if position_hour < width/2:
+        fill(255,233,26)
+        ellipse(0,0,70,70)
+    else:
+        fill(162,162,156)
+        ellipse(width,0,70,70)
