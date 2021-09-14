@@ -14,3 +14,17 @@ def draw():
     if position_second > width:
         position_second = 0
         background(171,154,250)
+    else: 
+        position_second = map(second(), 0, 59, 0, width)
+    fill(map(minute(), 0, 59, 0, 255))
+    ellipse(position_minute,150,50,50,)
+    position_minute =+ 1
+    if position_minute > width:
+        position_minute = 0
+    else: 
+        position_minute = map(minute(), 0, 59, 0, width)
+    fill(map(hour(), 0, 59, 255, 0))
+    ellipse(position_hour,220,50,50,)
+    position_hour =+ 1
+    if position_hour > width:
+        position_hour = 0
